@@ -250,7 +250,6 @@ if st.sidebar.button("Calcular"):
         mc_df['Lucro Acumulado'] = mc_df['%'].cumsum()
         mc_df['Contagem'] = range(1,x+1)
         simulations.append(mc_df)
-
     fig, ax = plt.subplots()
     for sim in simulations:
         ax.plot(sim['Contagem'], sim['Lucro Acumulado'], alpha=0.7)
@@ -266,8 +265,6 @@ if st.sidebar.button("Calcular"):
     bt.rename(columns={"%": "Lucro Total (%)"}, inplace=True)
     st.title("Backtest por ativos do Ibov:")   
     # Permitir copiar dados
-    st.write(bt)
- 
- 
+    st.write(bt) 
 
         
